@@ -2,6 +2,7 @@ package com.erooja.ghostrun_android.permission
 
 import android.Manifest
 import android.content.Context
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
@@ -48,12 +49,15 @@ class LocationPermissionRequester @Inject constructor(
         ) { permissions ->
             when {
                 permissions.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+                    Log.e("ObtainLocationPermission", "ACCESS_FINE_LOCATION")
                     emitFlow(LocationPermissionState.ObtainLocationPermission)
                 }
                 permissions.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+                    Log.e("PermissionFail", "ACCESS_COARSE_LOCATION")
                     emitFlow(LocationPermissionState.Error.PermissionFail)
                 }
                 else -> {
+                    Log.e("PermissionFail", "else")
                     emitFlow(LocationPermissionState.Error.PermissionFail)
                 }
             }

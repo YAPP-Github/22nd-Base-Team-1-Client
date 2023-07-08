@@ -8,9 +8,6 @@ import com.erooja.ghostrun_android.state.CurrentLocationState
 import kotlinx.coroutines.flow.MutableStateFlow
 
 object LocationPermissionUtil {
-    val trackingLocationFlow: MutableStateFlow<CurrentLocationState> = MutableStateFlow(
-        CurrentLocationState.UnInitialized)
-
     val permissions = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.ACCESS_COARSE_LOCATION
