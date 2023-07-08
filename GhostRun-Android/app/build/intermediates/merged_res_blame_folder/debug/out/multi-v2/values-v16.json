@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.erooja.ghostrun.app-mergeDebugResources-39:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/mintm1pro/.gradle/caches/transforms-3/0536d1e98bf17b88cfdfefe110cc6a4f/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
